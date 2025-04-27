@@ -1,6 +1,6 @@
 import streamlit as st
 import json
-from test import medicinal_foods, seasonal_ingredients
+from main import medicinal_foods, seasonal_ingredients
 from enhanced_diet_generator import EnhancedDietGenerator
 
 # 设置页面标题
@@ -91,7 +91,7 @@ if generate_button:
     try:
         # 根据用户选择的生成器类型实例化生成器
         if generator_type == "基础版":
-            from test import DietGenerator
+            from main import DietGenerator
             generator = DietGenerator(user_data)
         else:
             generator = EnhancedDietGenerator(user_data)

@@ -52,7 +52,7 @@ class EnhancedDietGenerator:
 
     def _select_medicinal(self) -> List[str]:
         """选择药食同源药材"""
-        from test import medicinal_foods
+        from main import medicinal_foods
         main_type = self.user_data["main_type"]
         return medicinal_foods.get(main_type, []) + medicinal_foods.get(self.user_data["sub_type"], [])
 
